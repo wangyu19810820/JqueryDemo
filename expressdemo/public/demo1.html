@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="jquery-3.2.0.js" ></script>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+//		$(function(){
+//			$('#div1').css("color", "red")
+//				  	  .css("font-size", "20px")
+//					  .css("font-weight", "bold");
+//		});
+//		window.onload = function(){
+//			alert(1)
+//		};
+//		window.onload = function(){
+//			alert(2)
+//		};
+
+		$(function(){
+//			$('#div2').css("color", "red");
+//			document.getElementById("div2").style.color = red;
+//			alert($('#div1').length);
+//			alert($("div")[0]);
+//			$("#div1").children("p").css("color", "red")
+			$("p[class~='class1']").css("color", "red")
+		});
+	</script>
+	<body>
+		<div id="div1">
+			<p class="class1 class2">jquery实例教程</p>
+			<p>jquery实例教程1</p>
+			<div>
+				<p>jquery实例教程</p>
+				<p>jquery实例教程</p>			
+			</div>
+		</div>
+	</body>
+</html>

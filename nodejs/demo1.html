@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 构造器模式
+//        function Person(name, age) {
+//            this.name = name;
+//            this.age = age;
+//        }
+//        var p1 = new Person("abc", 20);
+//        var p2 = new Person("abc", 20);
+//        console.log(p1 == p2);
+//        console.log(p1 === p2);
+
+        // 单例模式
+//        function Draw() {
+//            Draw.prototype.mark = null;
+//            this.draw = function (item) {
+//                console.log("我现在画完了" + item);
+//            }
+//        }
+//        Draw.newInstance = function () {
+//            if (!Draw.prototype.mark) {
+//                Draw.prototype.mark = new Draw();
+//            }
+//            return Draw.prototype.mark;
+//        }
+//        var pen1 =  Draw.newInstance();
+//        pen1.draw("item1");
+//        var pen2 =  Draw.newInstance();
+//        pen2.draw("item2");
+//        console.log(pen1 === pen2);
+
+        // 模块化开发
+//        function User(name) {
+//            return {
+//                add:function (item) {
+//                    console.log(name + " add " + item);
+//                },
+//                delete:function () {
+//
+//                },
+//                find:function (item) {
+//                    console.log(name + " find " + item)
+//                }
+//            };
+//        }
+//        var u1 = new User("aaa");
+//        u1.add("item1");
+//        var u2 = new User("bbb");
+//        u2.find("item2");
+
+        // factory模式
+        function Card (type, name) {
+            if (type == 1) {
+                return {
+                    outMoney:function (num) {
+                        console.log("信用卡:" + name + "取出:" + num);
+                    }
+                };
+            } else {
+                return {
+                    inMoney:function (num) {
+                        console.log("储蓄卡:" + name + "存入:" + num);
+                    }
+                };
+            }
+        }
+        var card1 = new Card(1, "张三");
+        card1.outMoney(100);
+        var card2 = new Card(2, "李四");
+        card2.inMoney(200);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // $('#div1 p').css("color", "red");
+            // $('#div1').find('p').css("color", "red");
+
+            // $("#div1 > p").css("color", "red");
+            // $('#div1').children('p').css("color", "red");
+
+            // $('#div1 + p').css({
+            //     "color": "red"
+            // });
+            // $("#div1").next('p').css("color", "red");
+
+            // $('#div1 ~ p').css({
+            //     "color": "red"
+            // });
+            // $("#div1").nextAll('p').css("color", "red");
+
+            // $("#div1").prev("p").css("color", "red");
+            // $("#div1").prevAll("p").css("color", "red");
+
+            // $("#div1").prevUntil("strong").css("color", "red");
+            // $("#div1").nextUntil("strong").css("color", "red");
+
+            $("#div1").siblings("p").css("color", "red");
+        });
+    </script>
+</head>
+
+<body>
+    <p>c</p>
+    <p>c</p>
+    <strong>strong</strong>
+    <p>c</p>
+    <p>c</p>
+    <div id="div1">
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <div>
+            <p>b</p>
+            <p>b</p>
+            <p>b</p>
+            <p>b</p>
+        </div>
+    </div>
+    <p>d</p>
+    <p>d</p>
+    <strong>strong</strong>
+    <p>d</p>
+    <p>d</p>
+</body>
+
+</html>

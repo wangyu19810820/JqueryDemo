@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		$(function(){
+            $("input").on("click", function () {
+//                $("div").load("server1.html?a=b&c=d .class1");
+                $("div").load("http://localhost:3000", {param1:"a", param2:"b"}, function (response, status, xh) {
+                    alert(response);
+                    if (status == 'success') {
+                        $(this).html("<div>zz</div>" + response);
+					}
+                });
+            });
+		});
+	</script>
+	<body>
+		<input type="button">
+		<div id="div1">
+
+		</div>
+	</body>
+</html>

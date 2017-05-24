@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+//            console.log($.isArray([1, 2]))
+//            console.log($.isEmptyObject({}))
+//            console.log($.isEmptyObject({name: 'aa'}))
+            
+//            console.log($.isFunction(function () {
+//
+//            }))
+
+//            console.log($.isPlainObject(window))
+//            console.log($.isPlainObject({name: 'aa'}))
+//            console.log($.isPlainObject('dd'))
+
+//            console.log($.isNumeric(1.33));
+//            console.log($.isNumeric(22));
+
+//            console.log($.type(1.33))
+//            console.log($.type({name: 'aa'}))
+//            console.log($.type(function () {
+//
+//            }))
+
+//            var win = window;
+//            console.log($.isWindow(win))
+
+//            console.log($.contains(document.getElementById("body1"), document.getElementById("div1")))
+//            console.log($('body').get(0))
+//            console.log($('div').first().get(0))
+//            console.log($.contains($('body').get(0), $('div').first().get(0)))
+
+            var obj = {
+                name: "aaa",
+                fn: function () {
+                    alert(this)
+                }
+            };
+//            alert(obj.fn())
+            $("#div1").click(obj.fn)
+            $("#div1").click($.proxy(obj, "fn"))
+        });
+    </script>
+</head>
+<body id="body1">
+    <div id="div1" class="box">1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>

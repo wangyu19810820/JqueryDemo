@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+
+
+//            $("input[type=button]").on('click', function () {
+////                alert(decodeURIComponent($('form').serialize()));
+////                alert(typeof($('form').serialize()));
+//                console.log($('form').serializeArray());
+//
+//                $.ajax({
+//                    url:'server1.html',
+//                    data:$('form').serialize(),
+//                    method:"POST",
+//                    success:function (res) {
+//                        alert(res);
+//                    }
+//                });
+//            });
+
+            $.ajaxSetup({
+                url:'server1.html',
+                method:"POST",
+                success:function (res) {
+                    alert(res);
+                }
+            });
+
+            $('#form1 input[type=button]').on('click', function () {
+                $.ajax({
+                    data:$('#form1').serializeArray()
+                })
+            });
+
+            $('#form2 input[type=button]').on('click', function () {
+                var s = $.param($('#form2').serializeArray());
+                alert(decodeURIComponent(s));
+                $.ajax({
+                    data:$('#form2').serializeArray(),
+                    error:function (res) {
+                        alert(res.status)
+                    }
+                })
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+<form id="form1">
+    <input type="text" name="name">
+    <input type="text" name="password">
+    <input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女
+    <input type="button">
+</form>
+
+<form id="form2">
+    <input type="text" name="name">
+    <input type="text" name="password">
+    <input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女
+    <input type="button">
+</form>
+
+</body>
+</html>

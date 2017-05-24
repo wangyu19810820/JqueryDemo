@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+//            var a = '   dfd    '
+//            alert(a)
+//            alert($.trim(a))
+
+            var arr = ['五三', '张王', '李四', '张王']
+            var arr1 = ['aa', 'bb']
+//            $.each(arr, function (index, value) {
+//                $('div').html(function (i, v) {
+//                    return v + "<br/>" + index + "," + value
+//                })
+//            })
+//            var subArray = $.grep(arr, function (value, index) {
+//                return index <= 1
+//            })
+//            console.log(subArray)
+//
+//            var newArray = $.map(arr, function (value, index) {
+//                return index + ":" + value
+//            })
+//            console.log(newArray)
+//
+//            console.log($.inArray('张王', arr))
+            var allArr = $.merge(arr, arr1)
+//            console.log(arr)
+//            console.log(arr1)
+//            console.log(allArr)
+//            console.log($.unique(allArr))
+//            console.log(allArr)
+
+//            var divs = $('div').get();
+//            var klass = $('.box').get();
+//            var allDiv = divs.concat(klass)
+//            console.log($(allDiv).length)
+//            console.log($.unique($(allDiv)).length)
+
+            console.log($('div').toArray()[0].innerHTML)
+        });
+    </script>
+</head>
+<body>
+    <div class="box">1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>

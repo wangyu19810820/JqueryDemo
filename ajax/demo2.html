@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <title>Title</title>
+    <script type="text/javascript">
+        $(function () {
+//            $('input').on('click', function () {
+//                $.get('server1.html', function (res, status) {
+//                    if (status == 'success') {
+//                        $('div').html(res)
+//                    }
+//                });
+//            });
+
+//            $('input').on('click', function () {
+//                $.get('server1.html', 'a=b&z=x', function (res, status) {
+//                    if (status == 'success') {
+//                        $('div').html(res)
+//                    }
+//                });
+//            });
+
+//            $('input').on('click', function () {
+//                $.get('server1.html', {a:'b', z:'x'}, function (res, status) {
+//                    if (status == 'success') {
+//                        $('div').html(res);
+//                    }
+//                })
+//            })
+
+            $('input').on('click', function () {
+                $.post('server1.html', 'a=b&z=x', function (res, status) {
+                    if (status == 'success') {
+                        $('div').html(res);
+                    }
+                }, 'text')
+            });
+
+//            $('input').on('click', function () {
+//                $.post('server1.html', {a:'c', y:'z'}, function (res, status) {
+//                    if (status == 'success') {
+//                        $('div').html(res);
+//                    }
+//                }, 'text')
+//            });
+
+//            $('input').on('click', function () {
+//                $.get('test.json', function (res, status) {
+//                    if (status == 'success') {
+//                        alert(res.a)
+//                    }
+//                });
+//            });
+
+//            $('input').on('click', function () {
+//                $.get('test.txt', function (res, status) {
+//                    if (status == 'success') {
+//                        alert(res.a)
+//                        $('div').text(res);
+//                    }
+//                }, 'json');
+//            });
+
+//            $('input').on('click', function () {
+//                $.getJSON('test.json', function (res, status) {
+//                    if (status == 'success') {
+//                        alert(res.a);
+//                    }
+//                })
+//            });
+
+//            $('input').on('click', function () {
+//                $.getScript('test.js', function (res, status) {
+//                    if (status == 'success') {
+//
+//                    }
+//                });
+//            });
+
+        });
+    </script>
+</head>
+<body>
+    <input type="button">
+    <div></div>
+</body>
+</html>

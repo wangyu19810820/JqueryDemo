@@ -1,0 +1,14 @@
+{
+  "name": "expressdemo",
+  "version": "1.0.0",
+  "description": "desc",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "wangyu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

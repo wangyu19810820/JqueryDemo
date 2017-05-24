@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		$(function () {
+//			$("input").on("click", function (e) {
+//				alert(1);
+//				e.stopPropagation();
+//				e.preventDefault();
+//			});
+
+//            $("input").on("mouseover.a mouseout.b", {user:"Lee"}, show);
+
+//            $("input").on({
+//				mouseover: function (e) {
+//                	alert(e.type);
+//            	},
+//				mouseout: function (e) {
+//                    alert(e.type);
+//                }
+//            });
+
+//            $("input").on("click", false);
+
+//            $("input").off(".a", show);
+
+//            $("div").on("click", "input[type=button]", function (e) {
+//                $(this).clone().appendTo("div");
+//            });
+//
+//            $("div").off("click", "input[type=button]");
+
+//            $("input").one("click", function () {
+//                alert('ok');
+//                return false;
+//            });
+
+            $("div").one("click", "input[type=button]", function (e) {
+                $(this).clone().appendTo("div");
+            });
+        });
+
+		function show(e) {
+            alert(e.data.user);
+        }
+	</script>
+	<body>
+		<div>
+			<input type="button">
+			<form action="demo1.html">
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+</html>

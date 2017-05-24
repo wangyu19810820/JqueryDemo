@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript" src="jquery.validate.js" ></script>
+    <script type="text/javascript" src="./localization/messages_zh.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+            $('form').validate();
+        })
+     </script>
+</head>
+<body>
+
+    <form action="demo2.html">
+        <p><input type="text" name="username" class="required" minlength="4">用户名(*)</p>
+        <p><input type="email" name="email" class="required email">电子邮件(*)</p>
+        <p><input type="text" name="url" class="url">网站</p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>

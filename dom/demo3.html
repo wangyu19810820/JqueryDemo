@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		$(function () {
+//            alert($('input').length);
+//            alert($(':input').length);
+//            alert($('input[name=username]').val());
+//            alert($('input[name=password]').val());
+//            alert($(':text').val());
+//            alert($(':radio').eq(1).val());
+//            alert($('form:hidden').length);
+//            alert($('form :disabled').length);
+//            alert($('form :enabled').length);
+            alert($('form :checked').length);
+            alert($('form :selected').length);
+        });
+	</script>
+	<body>
+		<form>
+			<input type="text" disabled="disabled" name="username" value="a">
+			<input type="password" name="password" value="b">
+			<textarea>c</textarea>
+			<select multiple="multiple">
+				<option value="d1" selected>d</option>
+				<option value="e1" selected>e</option>
+			</select>
+			<button></button>
+			<input type="radio" value="男" name="sex" checked="checked"> 男
+			<input type="radio" value="女" name="sex"> 女
+			<input type="checkbox" checked="checked">
+		</form>
+	</body>
+</html>

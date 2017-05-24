@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+//            $("div").mouseenter(function () {
+//                $("strong").html($("strong").html() + "1");
+//            });
+//
+//            $("div").mouseover(function () {
+//                $("strong").html($("strong").html() + "1");
+//            });
+//
+//            $("div").mouseout(function () {
+//                $("strong").html($("strong").html() + "1");
+//            });
+
+//            $("div").mouseleave(function () {
+//                $("strong").html($("strong").html() + "1");
+//            });
+
+//            $(":text").keydown(function (e) {
+//                alert(e.keyCode);
+//            });
+
+//            $(":text").keypress(function (e) {
+//                alert(e.charCode);
+//            });
+
+//            $(":text").focus(function () {
+//                $("strong").html("focus");
+//            }).blur(function () {
+//                $("strong").html("blur");
+//            });
+
+//            $("div").focusin(function () {
+//                $("strong").html("focusin");
+//            }).focusout(function () {
+//                $("strong").html("focusout");
+//            });
+
+//            $("div").hover(function () {
+//                $(this).css("background", "red");
+//            }, function () {
+//                $(this).css("background", "green");
+//            });
+
+            var index = 0;
+            $("div").click(function () {
+                if (index % 3 == 0) {
+                    $(this).css("background", "red");
+                } else if (index % 3 == 1) {
+                    $(this).css("background", "green");
+                } else {
+                    $(this).css("background", "blue");
+                }
+                index++;
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div style="width: 200px;height: 200px;background-color: gold">
+        <input type="text">
+        <p style="width: 100px;height: 100px;background-color: brown">sss</p>
+    </div>
+    <strong></strong>
+
+</body>
+</html>

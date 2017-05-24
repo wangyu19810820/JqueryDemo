@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+             $('input[type=button]').on('click', function () {
+//                 var jqXHR = $.ajax({
+//                    url: 'server1.html',
+//                    type: "POST",
+//                    dataType:"text",
+//                    data:$('#form1').serialize()
+//                }).done(function (res) {
+//                     alert('ok');
+//                 }).fail(function () {
+//                     alert('error');
+//                 }).done((res) => {
+//                     alert(res);
+//                 });
+
+                 var jqXHR1 = $.ajax({
+                     url: 'server1.html',
+                     type: "POST",
+                     dataType:"text",
+                     data:$('#form1').serialize()
+                 });
+                 var jqXHR2 = $.ajax({
+                     url: 'test.txt',
+                     type: "POST",
+                     dataType:"text",
+                 });
+                 $.when(jqXHR1, jqXHR2).done((r1, r2) => {
+                     console.log(r1);
+                     console.log(r2);
+                 });
+             });
+
+        });
+    </script>
+</head>
+<body>
+<form id="form1">
+    <input type="text" name="name">
+    <input type="text" name="password">
+    <input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女
+    <input type="button">
+</form>
+</body>
+</html>

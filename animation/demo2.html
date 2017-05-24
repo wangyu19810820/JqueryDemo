@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+		<title></title>
+		<style>
+
+		</style>
+	</head>
+	<script type="text/javascript">
+		$(function () {
+//            $("input").on("click", function () {
+//                $(".div1").animate({
+//					'width':400,
+//					'height':400,
+//					'opacity':0.5,
+//					'font-size':30
+//				}, 1000, function () {
+//                    alert('动画完成');
+//                });
+//            });
+
+//            $("input").on("click", function () {
+//                $(".div1").animate({
+//					'left':'+=100'
+//				}, 1000, function () {
+//                    $(this).animate({'top': '+=100'}, 1000);
+//                });
+//            });
+
+            $("input").on("click", function () {
+//                $(".div1").animate({'left': '+=100'})
+//					.animate({'top': '+=100'})
+//					.animate({'opacity':'-=0.3'})
+//					.animate({'font-size':'+=5'});
+
+//                $(".div1").animate({'left': '+=100'})
+//                $(".div2").animate({'top': '+=100'})
+//                $(".div1").animate({'opacity':'-=0.3'})
+//                $(".div2").animate({'font-size':'+=5'});
+
+                $(".div2").slideUp('slow', function () {
+					$(this).clearQueue();
+                }).slideDown('slow', showCount).queue(function (next) {
+                    $(this).css("background", "orange");
+                    next();
+//                    $(this).dequeue();
+                }).hide('slow');
+                
+
+            });
+
+            function showCount() {
+                alert($(".div2").queue('fx').length);
+            }
+
+        });
+	</script>
+	<body>
+		<input type="button">
+		<!--<div class="div1" style="background-color: red;width:200px;height: 200px;position: absolute;">aa</div>-->
+		<div class="div2" style="background-color: blue;width:200px;height: 200px;position: absolute;">aa</div>
+	</body>
+</html>

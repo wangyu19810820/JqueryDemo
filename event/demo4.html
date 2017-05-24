@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		$(function () {
+            $("div").delegate("input", "click", function (e) {
+                alert(e.target);
+                alert(e.currentTarget);
+                $(this).clone().appendTo('div');
+            });
+//            $("div").undelegate("input", "click");
+        });
+	</script>
+	<body>
+		<div style="height: 200px; width:200px; background-color: red;">
+			<input type="button">
+		</div>
+	</body>
+</html>

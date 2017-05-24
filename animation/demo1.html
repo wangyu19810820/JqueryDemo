@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+		<title></title>
+		<style>
+			.content {
+				background-color: gold;
+				padding: 5px;
+				margin: 5px;
+				float: left;
+				display: none;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		$(function () {
+            $("<div class='div1'></div>").css({"width":"200", "height":"200", "background":"red"})
+							.appendTo("body");
+//            $("<span>aaaa</span>").css({"background":"red"})
+//                			  .prependTo("p");
+            $("p").append($("<input type='button' id='show' value='show' />"));
+            $("p").append($("<input type='button' id='hide' value='hide' />"));
+            $("p").append($("<input type='button' id='toggle' value='toggle' />"));
+            $("#toggle").on("click", function () {
+//                $(".div1").toggle("slow");
+//                $(".content").first().toggle('slow', function toggleFn() {
+//                    $(this).next(".content").toggle('slow', toggleFn);
+//                });
+//                $(".div1").slideToggle(1000);
+//                $(".div1").fadeToggle('slow');
+                $(".div1").fadeTo('slow', 0.33);
+            });
+            $("#show").on("click", function showFn () {
+//                $("div").show('slow', function () {
+//                    alert("显示完毕");
+//                });
+//                $("span").show('normal');
+//                $(".content").first().show('slow', function showFun() {
+//					$(this).next().show('slow', showFun);
+//                });
+//                $(".div1").slideDown(1000);
+                $(".div1").fadeIn('slow');
+            });
+            $("#hide").on("click", function () {
+//                $("div").hide('slow', function () {
+//                    alert("隐藏完毕");
+//                });
+//                $("span").hide('normal');
+//                $(".content").last().hide('slow', function hideFun() {
+//                    $(this).prev().hide('slow', hideFun);
+//                });
+//                $(".div1").slideUp(1000);
+                $(".div1").fadeOut('slow');
+            });
+        })
+	</script>
+	<body>
+		<p></p>
+		<div class="content">1</div>
+		<div class="content">2</div>
+		<div class="content">3</div>
+		<div class="content">4</div>
+	</body>
+</html>

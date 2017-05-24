@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ajaxStart(function () {
+                $('#info').show();
+            }).ajaxStop(function () {
+                $('#info').hide();
+            })
+//                .ajaxError(function (event, xhr, setting, info) {
+////                console.log(event);
+//                console.log(xhr);
+////                console.log(setting);
+//            }).ajaxComplete(function () {
+//                console.log('ajaxComplete');
+//            }).ajaxSuccess(function () {
+//                console.log('ajaxSuccess');
+//            }).ajaxSend(function () {
+//                console.log('ajaxSend');
+//            });
+
+//            $('input[type=button]').on('click', function () {
+//                $.post('server1.html').done(function() {
+//                    alert( "success" );
+//                })
+//                    .fail(function() {
+//                        alert( "error" );
+//                    })
+//                    .always(function() {
+//                        alert( "finished" );
+//                    });
+//            });
+
+//            $('input[type=button]').on('click', function () {
+//                $.ajax({
+//                    url: 'http://dfsds',
+//                    type: "GET",
+//                    timeout: 500,
+//                    global: false,
+//                    success: function () {
+//                        alert('ok');
+//                    },
+//                    error: function () {
+//                        alert('error')
+//                    }
+//                })
+//            });
+        });
+    </script>
+</head>
+<body>
+    <div id="info" style="display: none;">start ajax...</div>
+    <form id="form1">
+        <input type="text" name="name">
+        <input type="text" name="password">
+        <input type="radio" name="sex" value="男">男
+        <input type="radio" name="sex" value="女">女
+        <input type="button">
+    </form>
+</body>
+</html>

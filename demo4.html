@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="js/jquery-3.2.0.js" ></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+//				$('div').addClass("red").addClass("bg");
+//				$('div').removeClass("red");
+//				$('div').click(function(){
+//					$(this).toggleClass("red");
+//				});
+				$('div').addClass("red");
+//				$('div').click(function(){
+//					$(this).toggleClass("red");
+//					$(this).toggleClass("green");
+////					if ($(this).hasClass("red")) {
+////						$(this).removeClass("green");
+////					} else {
+////						$(this).addClass("green");
+////					}
+//				});
+				var count = 0;
+				$('div').click(function(){
+					$('div').toggleClass(function(index, className, switchBool){
+						alert(index + ":" + className + ":" + switchBool);
+						return $(this).hasClass("red") ? "green" : "red";
+					});
+				});
+			});
+			
+		</script>
+		<style>
+			.red {
+				color:red;
+			}
+			.green {
+				color: green;
+			}
+			.bg {
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>dd</p>
+		<p>dd</p>
+		<div title="aa">ddd</div>
+		<div>ddd</div>
+		<div id="div1">
+			<strong>aaaa</strong>
+		</div>
+		<input type="text" value="ccc" />
+		<input type="checkbox" value="男" />男
+		<input type="checkbox" value="女" />女
+		<input type="radio" name="fav" value="music" />音乐
+		<input type="radio" name="fav" value="sport" />体育
+	</body>
+</html>

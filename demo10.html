@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+//            $("li:first-child").css("color", "red");
+//            $("li:last-child").css("color", "blue");
+//            $("li:only-child").css("color", "red");
+//            $("li:nth-child(even)").css("color", "red");
+//            $("li:nth-child(odd)").css("color", "blue");
+//            $("li:nth-child(2n + 1)").css("color", "red");
+//            alert($("li").is('#second'));
+//            alert($("li").is($('#second')));
+//            alert($("li").is($('#second').get(0)));
+//            alert($("#second").is(function () {
+//                return $(this).get(0).innerText == "aa";
+//            }));
+//            alert($("li").eq(2).hasClass('red'));
+//            $("li").slice(2, 3).css("color", "red");
+
+//            $(".ul1").next().end().css("color", "red");
+//            $(".ul1").find("li").end().css("color", "red");
+
+//            alert($("#div1").find("*").length);
+//            alert($("#div1").contents().length);
+
+//            $("li").filter(".red, :nth-child(even), :nth-child(odd)").css("color", "red");
+            $("li").filter(function () {
+                return $(this).attr('class') == 'red';
+            }).css("color", "red");
+        });
+
+
+    </script>
+    <style type="text/css">
+        /*ul li:nth-child(2) {*/
+            /*color:blue;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+    aa
+    <span id="n7" style="opacity: 0;">jQuery手册</span>
+    bb
+    <span id="n6" style="visibility: hidden;">http://www.365mini.com</span>
+    cc
+    <input id="n5" type="hidden" value="专注于编程开发技术分享">
+    <div id="div1" style="display:none">我们的旧域名<p>dd</p>www.sina.com</div>
+    <div>我们的新域名www.google.com</div>
+    <div></div>
+    <div></div>
+    <ul class="ul1">
+        <li>aa</li>
+        <li id="second">aa</li>
+        <li class="red">aa</li>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+    </ul>
+    <ul>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+    </ul>
+    <ul>
+        <li>aa</li>
+    </ul>
+    <h3>header</h3>
+    <input type="text"/>
+</body>
+
+</html>

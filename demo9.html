@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+//            $("ul li:first").css("color", "red");
+//            $("li").first().css("color", "red");
+
+//            $("#ul1 li:last").css("color", "blue");
+//            $("li").last().css("color", "blue");
+
+//            $("ul li:not(.second)").css("color", "blue");
+//            $("li").not(".second").css("color", "blue");
+
+//            $("#ul1 li:even").css("color", "blue");
+//            $("#ul1 li:odd").css("color", "red");
+
+//            $("ul li:eq(2)").css("color", "blue");
+//            $("ul li:eq(-1)").css("color", "blue");
+//            $("li").eq(2).css("color", "red");
+
+//            $(":header").css("color", "red");
+//            $("input").get(0).focus();
+//            $(":focus").css("background", "red");
+
+//            $("div:contains('sina')").css("color", "red");
+//            $("div:empty").css("border", "1px solid red");
+//            $("ul:has(#second)").css("background", "red");
+//            $("div:parent").css("border", "solid red");
+//            $("ul").has("#second").css("background", "red");
+//            $("li").parents(".ul1").css("background", "red");
+//            $("li").parent(".ul1").css("background", "blue");
+//            $("li").parentsUntil("html").css("background", "red");
+//            $("div:hidden").css("background", "red").show(1000);
+//            $("div:visible").css("background", "blue");
+            alert($("span:hidden").length);
+        });
+    </script>
+    <style type="text/css">
+        /*ul li:nth-child(2) {*/
+            /*color:blue;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+    aa
+    <span id="n7" style="opacity: 0;">jQuery手册</span>
+    bb
+    <span id="n6" style="visibility: hidden;">http://www.365mini.com</span>
+    cc
+    <input id="n5" type="hidden" value="专注于编程开发技术分享">
+    <div style="display:none">我们的旧域名www.sina.com</div>
+    <div>我们的新域名www.google.com</div>
+    <div></div>
+    <div></div>
+    <ul class="ul1">
+        <li>aa</li>
+        <li id="second">aa</li>
+        <li>aa</li>
+    </ul>
+    <ul>
+        <li>aa</li>
+        <li>aa</li>
+        <li>aa</li>
+    </ul>
+    <h3>header</h3>
+    <input type="text"/>
+</body>
+
+</html>
