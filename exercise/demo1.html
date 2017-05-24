@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+//            $("div p").css("color", "red")
+//            $("div").find("p").css("color", "blue")
+//            $("#div1 > p").css("color", "blue")
+//            $("#div1").children("p").css("color", "red")
+//            $("#p1 + p").css("color", "red")
+//            $("#p1").next("strong").css("color", "red")
+//            $("#p1 ~ p").css("color", "red")
+            $("#p1").nextAll("p").css("color", "red")
+        })
+    </script>
+</head>
+<body>
+<div id="div1">
+    <p id="p1">aaa</p>
+    <strong>aaa</strong>
+    <p>aaa</p>
+    <p>aaa</p>
+    <div>
+        <p>aaa</p>
+        <p>aaa</p>
+        <p>aaa</p>
+    </div>
+</div>
+</body>
+</html>
